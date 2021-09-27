@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@algo-problems-with-tests/leet-code": ["libs/leet-code/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -77,6 +77,28 @@
           }
         }
       }
+    },
+    "leet-code": {
+      "root": "libs/leet-code",
+      "sourceRoot": "libs/leet-code/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/leet-code/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/leet-code"],
+          "options": {
+            "jestConfig": "libs/leet-code/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -46,6 +46,10 @@ export function lengthOfLongestSubstring(s: string): number {
   return max;
 }
 
+// what is the time and space complexity?
+// time: O(n)
+// space: O(n)
+
 lengthOfLongestSubstring('abcabcbb');
 lengthOfLongestSubstring('bbbbb');
 lengthOfLongestSubstring('pwwkew');

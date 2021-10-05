@@ -46,11 +46,17 @@ export function lengthOfLongestSubstring(s: string): number {
   return max;
 }
 
-// what is the time and space complexity?
-// time: O(n)
-// space: O(n)
-
 lengthOfLongestSubstring('abcabcbb');
 lengthOfLongestSubstring('bbbbb');
 lengthOfLongestSubstring('pwwkew');
 lengthOfLongestSubstring('');
+
+// The idea is to use a sliding window to keep track of the longest substring without repeating characters.
+// The sliding window is defined by two pointers, start and end.
+// The start pointer is the beginning of the sliding window.
+// The end pointer is the end of the sliding window.
+// The length of the sliding window is the number of characters in the window.
+// The length of the longest substring without repeating characters is the length of the sliding window.
+// The start pointer is moved forward by one character at a time.
+// Time complexity: O(n)
+// Space complexity: O(n)

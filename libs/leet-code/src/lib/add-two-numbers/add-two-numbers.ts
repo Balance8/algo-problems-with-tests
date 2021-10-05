@@ -58,12 +58,15 @@ export function addTwoNumbers(
   return head;
 }
 
-// what is the time and space complexity?
-// time: O(n)
-// space: O(1)
-
-
 addTwoNumbers(
   new ListNode(2, new ListNode(4, new ListNode(3))),
   new ListNode(5, new ListNode(6, new ListNode(4)))
 );
+
+// The idea is to keep a carry and add the two digits.
+// If the sum is greater than 9, we need to carry one more digit.
+// If the sum is less than 10, we don't need to carry any more.
+// If the sum is 10, we need to carry one more digit and add 1 to the sum.
+// If the sum is 11, we need to carry one more digit and add 0 to the sum.
+// Time complexity: O(n)
+// Space complexity: O(1)

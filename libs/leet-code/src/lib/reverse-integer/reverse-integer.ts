@@ -1,5 +1,7 @@
 // Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2, 2 - 1], then return 0.
 
+import { toString } from 'console';
+
 // Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 
 // Example 1:
@@ -30,6 +32,7 @@ export function reverse(x: number): number {
   // check if the number is negative
   const isNegative = x < 0;
   const reversed = x.toString().split('').reverse().join('');
+
   let result = parseInt(reversed, 10);
   if (isNegative) {
     // Set result equal to the negative of the result
@@ -41,7 +44,7 @@ export function reverse(x: number): number {
   }
   return result;
 }
-Math.sign
+Math.sign;
 
 console.log(reverse(123));
 console.log(reverse(-123));
@@ -54,3 +57,7 @@ console.log(reverse(-2147483648));
 // If the number is negative, we need to convert it to positive and then convert it back to negative.
 // Time complexity: O(n)
 // Space complexity: O(n)
+
+// Extra:
+// const absReversed = Math.abs(x).toString().split('').reverse().join('');
+// from leetcode

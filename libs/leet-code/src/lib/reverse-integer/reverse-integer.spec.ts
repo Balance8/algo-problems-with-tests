@@ -22,6 +22,6 @@ describe('reverse', () => {
   });
 
   it('should return 0 for 1534236469', () => {
-    expect(reverse(1534236469)).toEqual(9646324351);
+    expect(reverse(1534236469)).toEqual(0);
   });
 });

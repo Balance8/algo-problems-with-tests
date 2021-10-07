@@ -27,20 +27,28 @@
 // 1. -2 <= x <= 2 - 1
 
 export function reverse(x: number): number {
+  // check if the number is negative
+  const isNegative = x < 0;
   const reversed = x.toString().split('').reverse().join('');
-
-  if (x < 0) {
-    return parseInt(reversed) * -1;
+  let result = parseInt(reversed, 10);
+  if (isNegative) {
+    // Set result equal to the negative of the result
+    result *= -1;
   }
 
-  return parseInt(reversed);
+  if (result < -2147483648 || result > 2147483647) {
+    return 0;
+  }
+  return result;
 }
+Math.sign
 
 console.log(reverse(123));
 console.log(reverse(-123));
 console.log(reverse(120));
 console.log(reverse(0));
 console.log(reverse(1534236469));
+console.log(reverse(-2147483648));
 
 // The idea is to convert the number to string, reverse it and convert it back to number.
 // If the number is negative, we need to convert it to positive and then convert it back to negative.
